@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Wedding Invitation | Ayushmati Kshyanashree &amp; Ayushman Manas</title>
+  <meta name="description" content="With the blessings of our elders and families, we warmly invite you to celebrate the auspicious wedding ceremony of Ayushmati Kshyanashree &amp; Ayushman Manas in Jaipur.">
+  <meta name="theme-color" content="#4a0e17">
+
+  <!-- Open Graph for WhatsApp & Social Sharing -->
+  <meta property="og:title" content="Wedding Invitation | Ayushmati Kshyanashree &amp; Ayushman Manas">
+  <meta property="og:description" content="Join us in celebrating the auspicious union of Ayushmati Kshyanashree &amp; Ayushman Manas, arranged with family blessings on 15 February 2027.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/hero-bg.svg">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Google Fonts: Great Vibes (Script), Playfair Display (Serif), Poppins (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========================================================
+       PRELOADER SCREEN
+       ======================================================== -->
+  <div id="preloader" class="preloader" aria-label="Loading Invitation">
+    <div class="preloader-content">
+      <div class="rings-container">
+        <div class="ring ring-1"></div>
+        <div class="ring ring-2"></div>
+        <div class="preloader-heart">♥</div>
+      </div>
+      <p class="preloader-text shimmer-text">Inviting you to celebrate love...</p>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       CANVAS BACKGROUND: Falling Petals & Gold Sparkles
+       ======================================================== -->
+  <canvas id="petals-canvas" class="petals-canvas" aria-hidden="true"></canvas>
+
+  <!-- ========================================================
+       FLOATING AUDIO CONTROLLER
+       ======================================================== -->
+  <div class="floating-audio-container">
+    <button id="musicToggleBtn" class="music-toggle-btn" aria-label="Toggle Wedding Background Music" title="Play / Pause Wedding Music">
+      <div class="music-icon-disc">
+        <svg class="music-note-icon" viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+          <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+        </svg>
+      </div>
+      <div class="audio-waves" id="audioWaves">
+        <span class="wave-bar"></span>
+        <span class="wave-bar"></span>
+        <span class="wave-bar"></span>
+        <span class="wave-bar"></span>
+      </div>
+    </button>
+    <audio id="weddingAudio" loop preload="auto">
+      <source src="audio/wedding-ambient.mp3" type="audio/mp3">
+      <source src="audio/wedding-ambient.wav" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <!-- ========================================================
+       SECTION 1: HERO / ROYAL OPENING SCREEN & ENVELOPE MODAL
+       ======================================================== -->
+  <section id="hero" class="hero-section">
+    <!-- Hero Background Layer with subtle parallax -->
+    <div class="hero-bg-layer" style="background-image: url('images/hero-bg.svg');"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-container">
+      <!-- Auspicious Shloka / Blessing -->
+      <div class="auspicious-mantra reveal-on-load">
+        <span class="mantra-text">|| श्री गणेशाय नमः ||</span>
+        <span class="mantra-sub">Shree Ganeshay Namah</span>
+      </div>
+
+      <!-- Royal Monogram -->
+      <div class="royal-monogram reveal-on-load">
+        <div class="monogram-badge">
+          <span>K</span>
+          <span class="ampersand">&amp;</span>
+          <span>M</span>
+        </div>
+      </div>
+
+      <!-- Invitation Header -->
+      <p class="hero-subtitle reveal-on-load">Together with their families</p>
+      
+      <!-- Couple Names in Gold Script with Traditional Auspicious Titles -->
+      <h1 class="hero-couple-names shimmer-text reveal-on-load">
+        <span class="name-block">
+          <span class="name-prefix">Ayushmati</span>
+          <span class="name bride-hero-name">Kshyanashree</span>
+        </span>
+        <span class="and-symbol">&amp;</span>
+        <span class="name-block">
+          <span class="name-prefix">Ayushman</span>
+          <span class="name groom-hero-name">Manas</span>
+        </span>
+      </h1>
+
+      <p class="hero-invitation-line reveal-on-load">
+        cordially invite you to celebrate their wedding ceremonies
+      </p>
+
+      <!-- Wedding Date & Venue Callout -->
+      <div class="hero-date-badge reveal-on-load">
+        <div class="date-item">
+          <span class="date-day">Sunday</span>
+        </div>
+        <div class="date-divider"></div>
+        <div class="date-item highlight">
+          <span class="date-number">15</span>
+          <span class="date-month">February 2027</span>
+        </div>
+        <div class="date-divider"></div>
+        <div class="date-item">
+          <span class="date-city">Jaipur, India</span>
+        </div>
+      </div>
+
+      <!-- Open Invitation Button -->
+      <div class="hero-cta-wrap reveal-on-load">
+        <button id="openInvitationBtn" class="btn btn-royal btn-shimmer" aria-haspopup="dialog" aria-expanded="false">
+          <span class="btn-icon">✉</span>
+          <span class="btn-text">Open Royal Invitation</span>
+        </button>
+      </div>
+
+      <!-- Scroll Down Indicator -->
+      <a href="#welcome-msg" class="scroll-down-indicator" aria-label="Scroll down to invitation details">
+        <span>Scroll Down</span>
+        <div class="scroll-arrow">↓</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       ENVELOPE OPENING OVERLAY (Animated Royal Card Transition)
+       ======================================================== -->
+  <div id="envelopeModal" class="envelope-modal" role="dialog" aria-modal="true" aria-labelledby="envelopeTitle" hidden>
+    <div class="envelope-backdrop" id="envelopeBackdrop"></div>
+    <div class="envelope-wrapper">
+      <button class="modal-close-btn" id="closeEnvelopeBtn" aria-label="Close Invitation Preview">&times;</button>
+      
+      <!-- Realistic 3D Royal Envelope -->
+      <div class="envelope" id="envelopeBox">
+        <!-- Envelope Flap -->
+        <div class="envelope-flap" id="envelopeFlap">
+          <!-- Wax Seal -->
+          <div class="wax-seal" id="waxSealBtn" title="Click to break seal & open!">
+            <img src="images/wax-seal.svg" alt="Royal Wax Seal" width="80" height="80">
+          </div>
+        </div>
+        <div class="envelope-pocket"></div>
+        
+        <!-- The Royal Letter card sliding out -->
+        <div class="royal-letter" id="royalLetter">
+          <div class="letter-border">
+            <div class="letter-inner">
+              <div class="letter-mandala">
+                <img src="images/mandala.svg" alt="Mandala" width="60" height="60">
+              </div>
+              <h2 id="envelopeTitle" class="letter-heading">Royal Invitation</h2>
+              <div class="letter-shloka">वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ।<br>निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा॥</div>
+              <p class="letter-names">Kshyanashree &amp; Manas</p>
+              <p class="letter-subnames">(Ayushmati Kshyanashree &amp; Ayushman Manas)</p>
+              <p class="letter-body">
+                Two families unite, two souls begin their sacred journey.<br>
+                Arranged by destiny and sealed with the blessings of our elders, our celebration is made complete with your gracious presence.
+              </p>
+              <div class="letter-date">
+                <strong>Sunday, 15th February 2027</strong><br>
+                The Grand Heritage Palace, Jaipur
+              </div>
+              <button id="unfoldInvitationBtn" class="btn btn-royal btn-sm">
+                Enter Celebrations ➔
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="envelope-hint">Click the seal or button to open your personalized card</p>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       STICKY NAVIGATION BAR
+       ======================================================== -->
+  <header id="mainNav" class="main-navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand">
+        <span class="brand-monogram">K &amp; M</span>
+      </a>
+      
+      <button id="mobileMenuBtn" class="mobile-menu-toggle" aria-label="Open Navigation Menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#welcome-msg" class="nav-link">Welcome</a>
+        <a href="#couple" class="nav-link">The Couple</a>
+        <a href="#story" class="nav-link">Our Story</a>
+        <a href="#countdown" class="nav-link">Countdown</a>
+        <a href="#events" class="nav-link">Functions</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#venue" class="nav-link">Venue</a>
+        <a href="#blessings" class="nav-link nav-rsvp-btn">Send Blessings</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========================================================
+         FAMILY WELCOME / INVITATION MESSAGE
+         ======================================================== -->
+    <section id="welcome-msg" class="welcome-section section-padding">
+      <div class="container text-center">
+        <div class="ornament-divider">
+          <span class="ornament-line"></span>
+          <img src="images/mandala.svg" alt="Ornate Divider" class="ornament-mandala" width="45" height="45">
+          <span class="ornament-line"></span>
+        </div>
+
+        <p class="section-tag">With The Grace Of Almighty &amp; Ancestors</p>
+        <h2 class="section-title">The Royal Wedding Invitation</h2>
+
+        <div class="royal-message-card scroll-reveal">
+          <p class="message-salutation">Dear Family &amp; Friends,</p>
+          <p class="message-text">
+            With the divine blessings of our ancestors and parents, two respected families come together in joy, harmony, and mutual respect. 
+            The <strong>Sharma &amp; Kapoor</strong> families cordially invite you and your family 
+            to grace the auspicious wedding ceremony of their beloved children:
+          </p>
+          <div class="message-highlight-names">
+            <span class="m-prefix">Ayushmati</span>
+            <span class="m-name">Kshyanashree</span>
+            <span class="m-and">&amp;</span>
+            <span class="m-prefix">Ayushman</span>
+            <span class="m-name">Manas</span>
+          </div>
+          <p class="message-text">
+            As they embark on this sacred journey of companionship, trust, and the seven holy vows,
+            your gracious presence, warmth, and blessings will be our greatest honor.
+          </p>
+          <div class="message-hosts">
+            <div class="host-group">
+              <span class="host-role">Bride's Family:</span>
+              <span class="host-name">The Loving Family of Kshyanashree</span>
+            </div>
+            <div class="host-divider">✦</div>
+            <div class="host-group">
+              <span class="host-role">Groom's Family:</span>
+              <span class="host-name">The Loving Family of Manas</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 2: OUR STORY / COUPLE SECTION
+         ======================================================== -->
+    <section id="couple" class="couple-section section-padding">
+      <div class="container">
+        <div class="ornament-divider">
+          <span class="ornament-line"></span>
+          <span class="ornament-heart">❦</span>
+          <span class="ornament-line"></span>
+        </div>
+        <p class="section-tag text-center">Two Families, Two Souls, One Auspicious Match</p>
+        <h2 class="section-title text-center">Meet The Couple</h2>
+
+        <div class="couple-grid">
+          <!-- Bride Card -->
+          <div class="couple-card bride-card scroll-reveal-left">
+            <div class="couple-img-wrapper">
+              <img src="images/bride.jpg" alt="Ayushmati Kshyanashree - The Radiant Bride" class="couple-img bride-photo" loading="lazy">
+              <div class="couple-frame-border"></div>
+            </div>
+            <div class="couple-info">
+              <span class="couple-role">The Radiant Bride</span>
+              <h3 class="couple-name">Ayushmati Kshyanashree</h3>
+              <p class="couple-parentage">Daughter of Respected Parents &amp; Family</p>
+              <p class="couple-bio">
+                "Graceful, cultured, and deeply devoted to family traditions. 
+                From their very first family meeting, she recognized in Manas a gentleman of genuine integrity, intellect, and profound family values."
+              </p>
+              <div class="couple-social">
+                <span class="quote-sign">“When families unite with respect, hearts find their true home.”</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Center Love Badge -->
+          <div class="couple-center-badge scroll-reveal-zoom">
+            <div class="center-heart-pulse">
+              <span class="heart-symbol">✦</span>
+              <span class="badge-ring"></span>
+            </div>
+            <span class="badge-text">Blessed By Elders</span>
+          </div>
+
+          <!-- Groom Card -->
+          <div class="couple-card groom-card scroll-reveal-right">
+            <div class="couple-img-wrapper">
+              <img src="images/groom.jpg" alt="Ayushman Manas - The Dashing Groom" class="couple-img groom-photo" loading="lazy">
+              <div class="couple-frame-border"></div>
+            </div>
+            <div class="couple-info">
+              <span class="couple-role">The Dashing Groom</span>
+              <h3 class="couple-name">Ayushman Manas</h3>
+              <p class="couple-parentage">Son of Respected Parents &amp; Family</p>
+              <p class="couple-bio">
+                "Warm-hearted, visionary, and rooted in rich cultural heritage. 
+                Upon meeting Kshyanashree and her family, he was captivated by her poise, intellect, and warmth, knowing she was his ideal life companion."
+              </p>
+              <div class="couple-social">
+                <span class="quote-sign">“Arranged by destiny, confirmed by values, blessed for eternity.”</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- LOVE STORY TIMELINE -->
+        <div id="story" class="love-story-block">
+          <div class="ornament-divider">
+            <span class="ornament-line"></span>
+            <img src="images/mandala.svg" alt="Mandala" class="ornament-mandala" width="35" height="35">
+            <span class="ornament-line"></span>
+          </div>
+          <p class="section-tag text-center">The Auspicious Journey</p>
+          <h3 class="subsection-title text-center">From First Meeting To Forever</h3>
+
+          <div class="timeline">
+            <!-- Timeline Item 1 -->
+            <div class="timeline-item scroll-reveal-left">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">October 2025</div>
+              <div class="timeline-card">
+                <h4>The Families Meet (Rishta Meeting)</h4>
+                <p>
+                  Introduced through our families' shared connections, we met on an auspicious afternoon over traditional chai and sweets. 
+                  What began with gentle introductions blossomed into hours of effortless, warm conversation about life goals, dreams, and family values.
+                </p>
+              </div>
+            </div>
+
+            <!-- Timeline Item 2 -->
+            <div class="timeline-item scroll-reveal-right">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">February 2026</div>
+              <div class="timeline-card">
+                <h4>Connecting Minds &amp; Values</h4>
+                <p>
+                  Over phone calls and dinner with our families, we got to know each other's perspectives on life, career, and traditions. 
+                  We discovered how beautifully our values aligned and how naturally mutual respect turned into deep friendship.
+                </p>
+              </div>
+            </div>
+
+            <!-- Timeline Item 3 -->
+            <div class="timeline-item scroll-reveal-left">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">August 2026</div>
+              <div class="timeline-card">
+                <h4>The Auspicious Roka &amp; Sagai</h4>
+                <p>
+                  With the joyous approval and heartfelt blessings of both sets of grandparents and parents, the sacred Roka ceremony was solemnized. 
+                  We exchanged rings and traditional shagun, officially uniting our families in celebration.
+                </p>
+              </div>
+            </div>
+
+            <!-- Timeline Item 4 -->
+            <div class="timeline-item scroll-reveal-right">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">15 February 2027</div>
+              <div class="timeline-card highlight-card">
+                <h4>The Sacred Seven Vows (Saptapadi)</h4>
+                <p>
+                  Surrounded by the holy Vedic fire and our cherished elders, we embark upon our lifelong journey 
+                  of companionship, dharma, and eternal togetherness as husband and wife.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 3: LIVE COUNTDOWN TIMER
+         ======================================================== -->
+    <section id="countdown" class="countdown-section section-padding">
+      <div class="container text-center">
+        <p class="section-tag">Counting Every Precious Second</p>
+        <h2 class="section-title">Until We Say "I Do"</h2>
+        <p class="countdown-sub">15 February 2027 • 6:30 PM Onwards</p>
+
+        <!-- Live Countdown Grid -->
+        <div class="countdown-grid scroll-reveal-zoom" id="countdownGrid" data-wedding-date="2027-02-15T18:30:00">
+          <div class="countdown-card">
+            <div class="countdown-num" id="days">00</div>
+            <div class="countdown-label">Days</div>
+          </div>
+          <div class="countdown-card">
+            <div class="countdown-num" id="hours">00</div>
+            <div class="countdown-label">Hours</div>
+          </div>
+          <div class="countdown-card">
+            <div class="countdown-num" id="minutes">00</div>
+            <div class="countdown-label">Minutes</div>
+          </div>
+          <div class="countdown-card">
+            <div class="countdown-num" id="seconds">00</div>
+            <div class="countdown-label">Seconds</div>
+          </div>
+        </div>
+
+        <!-- Add to Calendar Action -->
+        <div class="calendar-action-wrap scroll-reveal">
+          <a id="addToCalendarBtn" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-gold">
+            <span class="btn-icon">📅</span>
+            <span>Add To Google Calendar</span>
+          </a>
+          <button id="downloadIcsBtn" class="btn btn-outline-gold">
+            <span class="btn-icon">📥</span>
+            <span>Save To Apple / Outlook (iCal)</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 4: EVENT DETAILS (FUNCTION CARDS)
+         ======================================================== -->
+    <section id="events" class="events-section section-padding">
+      <div class="container">
+        <div class="ornament-divider">
+          <span class="ornament-line"></span>
+          <img src="images/mandala.svg" alt="Mandala" class="ornament-mandala" width="45" height="45">
+          <span class="ornament-line"></span>
+        </div>
+        <p class="section-tag text-center">Rituals &amp; Celebrations</p>
+        <h2 class="section-title text-center">Wedding Itinerary</h2>
+        <p class="section-subtitle text-center">
+          We request the honor of your gracious presence at each of our wedding festivities.
+        </p>
+
+        <div class="events-grid">
+          <!-- 1. Haldi -->
+          <div class="event-card scroll-reveal">
+            <div class="event-card-top">
+              <div class="event-icon-box">
+                <img src="images/haldi.svg" alt="Haldi Ceremony" width="60" height="60">
+              </div>
+              <span class="event-badge">Ritual of Joy</span>
+            </div>
+            <h3 class="event-name">Haldi Ceremony</h3>
+            <p class="event-desc">
+              A vibrant celebration bathed in turmeric, marigold petals, love, and sunshine.
+            </p>
+            <div class="event-meta">
+              <div class="meta-row">
+                <span class="meta-icon">🗓</span>
+                <span class="meta-text">Saturday, 13 Feb 2027</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-icon">⏰</span>
+                <span class="meta-text">10:30 AM Onwards</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-icon">📍</span>
+                <span class="meta-text">Courtyard of Marigolds, Palace East Lawn</span>
+              </div>
+              <div class="meta-row attire-row">
+                <span class="meta-icon">👗</span>
+                <span class="meta-text"><strong>Attire:</strong> Sunshine Yellow &amp; Mustard Ethnic</span>
+              </div>
+            </div>
+            <div class="event-card-footer">
+              <button class="event-cal-btn" data-event-index="0">Add to Calendar</button>
+            </div>
+          </div>
+
+          <!-- 2. Mehndi -->
+          <div class="event-card scroll-reveal">
+            <div class="event-card-top">
+              <div class="event-icon-box">
+                <img src="images/mehndi.svg" alt="Mehndi Ceremony" width="60" height="60">
+              </div>
+              <span class="event-badge">Colors of Henna</span>
+            </div>
+            <h3 class="event-name">Mehndi Ceremony</h3>
+            <p class="event-desc">
+              Intricate henna art, folk music, dhol beats, and sweet laughter under fragrant canopies.
+            </p>
+            <div class="event-meta">
+              <div class="meta-row">
+                <span class="meta-icon">🗓</span>
+                <span class="meta-text">Saturday, 13 Feb 2027</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-icon">⏰</span>
+                <span class="meta-text">4:30 PM Onwards</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-icon">📍</span>
+                <span class="meta-text">The Royal Verandah &amp; Poolside Pavilion</span>
+              </div>
+              <div class="meta-row attire-row">
+                <span class="meta-icon">👗</span>
+                <span class="meta-text"><strong>Attire:</strong> Forest Green, Teal &amp; Floral Pastel</span>
+              </div>
+            </div>
+            <div class="event-card-footer">
+              <button class="event-cal-btn" data-event-index="1">Add to Calendar</button>
+            </div>
+          </div>
+
+          <!-- 3. Sangeet -->
+          <div class="event-card scroll-reveal">
+            <div class="event-card-top">
+              <div class="event-icon-box">
+                <img src="images/sangeet.svg" alt="Sangeet Night" width="60" height="60">
+              </div>
+              <span class="event-badge">Night of Melody</span>
+            </div>
+            <h3 class="event-name">Sangeet &amp; Cocktail</h3>
+            <p class="event-desc">
+              An electrifying musical extravaganza filled with dance performances, cocktails, and midnight toasts.
+            </p>
+            <div class="event-meta">
+              <div class="meta-row">
+                <span class="meta-icon">🗓</span>
+                <span class="meta-text">Sunday, 14 Feb 2027</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-icon">⏰</span>
+                <span class="meta-text">7:00 PM Onwards</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-icon">📍</span>
+                <span class="meta-text">Grand Crystal Ballroom, The Royal Palace</span>
+              </div>
+              <div class="meta-row attire-row">
+                <span class="meta-icon">👗</span>
+                <span class="meta-text"><strong>Attire:</strong> Glamorous Indo-Western &amp; Shimmer</span>
+              </div>
+            </div>
+            <div class="event-card-footer">
+              <button class="event-cal-btn" data-event-index="2">Add to Calendar</button>
+            </div>
+          </div>
+
+          <!-- 4. Wedding (Holy Pheras) -->
+          <div class="event-card highlight-event-card scroll-reveal">
+            <div class="event-card-top">
+              <div class="event-icon-box">
+                <img src="images/wedding.svg" alt="Wedding Ceremony" width="60" height="60">
+              </div>
+              <span class="event-badge royal-badge">Auspicious Muhurat</span>
+            </div>
+            <h3 class="event-name">The Wedding Ceremony</h3>
+            <p class="event-desc">
+              The sacred Barat procession, Jaimala, and Holy Pheras around the eternal fire.
+            </p>
+            <div class="event-meta">
+              <div class="meta-row">
+                <span class="meta-icon">🗓</span>
+                <span class="meta-text"><strong>Monday, 15 Feb 2027</strong></span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-icon">⏰</span>
+                <span class="meta-text">Barat: 5:30 PM | Pheras: 7:00 PM</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-icon">📍</span>
+                <span class="meta-text">The Grand Heritage Mandap, Main Palace Lawn</span>
+              </div>
+              <div class="meta-row attire-row">
+                <span class="meta-icon">👗</span>
+                <span class="meta-text"><strong>Attire:</strong> Regal Emerald Green, Pearl Ivory &amp; Antique Gold</span>
+              </div>
+            </div>
+            <div class="event-card-footer">
+              <button class="event-cal-btn" data-event-index="3">Add to Calendar</button>
+            </div>
+          </div>
+
+          <!-- 5. Grand Reception -->
+          <div class="event-card scroll-reveal">
+            <div class="event-card-top">
+              <div class="event-icon-box">
+                <img src="images/reception.svg" alt="Grand Reception" width="60" height="60">
+              </div>
+              <span class="event-badge">Royal Banquet</span>
+            </div>
+            <h3 class="event-name">The Grand Reception</h3>
+            <p class="event-desc">
+              A grand royal feast, music, and celebration welcoming the newlyweds into married bliss.
+            </p>
+            <div class="event-meta">
+              <div class="meta-row">
+                <span class="meta-icon">🗓</span>
+                <span class="meta-text">Tuesday, 16 Feb 2027</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-icon">⏰</span>
+                <span class="meta-text">7:30 PM Onwards</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-icon">📍</span>
+                <span class="meta-text">Royal Banquet Hall &amp; Poolside Lawns</span>
+              </div>
+              <div class="meta-row attire-row">
+                <span class="meta-icon">👗</span>
+                <span class="meta-text"><strong>Attire:</strong> Formal Tuxedos &amp; Royal Silk Sarees</span>
+              </div>
+            </div>
+            <div class="event-card-footer">
+              <button class="event-cal-btn" data-event-index="4">Add to Calendar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 5: PHOTO GALLERY WITH LIGHTBOX
+         ======================================================== -->
+    <section id="gallery" class="gallery-section section-padding">
+      <div class="container">
+        <div class="ornament-divider">
+          <span class="ornament-line"></span>
+          <span class="ornament-heart">♥</span>
+          <span class="ornament-line"></span>
+        </div>
+        <p class="section-tag text-center">Moments Frozen In Time</p>
+        <h2 class="section-title text-center">Pre-Wedding Gallery</h2>
+        <p class="section-subtitle text-center">
+          Glimpses into our journey, our smiles, and the chapters written along the way.
+        </p>
+
+        <!-- Gallery Filter Tabs -->
+        <div class="gallery-filters" role="tablist">
+          <button class="filter-btn active" data-filter="all">All Moments</button>
+          <button class="filter-btn" data-filter="ceremonies">Ceremonies</button>
+          <button class="filter-btn" data-filter="festive">Festive</button>
+          <button class="filter-btn" data-filter="family">Family Moments</button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid" id="galleryGrid">
+          <!-- Item 1: Bride Photo -->
+          <div class="gallery-item scroll-reveal" data-category="family" data-index="0" data-src="images/bride.jpg" data-caption="Ayushmati Kshyanashree" data-sub="The Radiant Bride at the auspicious temple">
+            <div class="gallery-thumb-wrap">
+              <img src="images/bride.jpg" alt="Ayushmati Kshyanashree" class="gallery-img" style="object-position: center 25%;" loading="lazy">
+              <div class="gallery-overlay">
+                <span class="gallery-zoom-icon">🔍</span>
+                <h4 class="gallery-caption-title">Ayushmati Kshyanashree</h4>
+                <p class="gallery-caption-sub">The Radiant Bride</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: Groom Photo -->
+          <div class="gallery-item scroll-reveal" data-category="family" data-index="1" data-src="images/groom.jpg" data-caption="Ayushman Manas" data-sub="The Dashing Groom in traditional royal attire">
+            <div class="gallery-thumb-wrap">
+              <img src="images/groom.jpg" alt="Ayushman Manas" class="gallery-img" style="object-position: center 15%;" loading="lazy">
+              <div class="gallery-overlay">
+                <span class="gallery-zoom-icon">🔍</span>
+                <h4 class="gallery-caption-title">Ayushman Manas</h4>
+                <p class="gallery-caption-sub">The Dashing Groom</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3: The Auspicious Roka -->
+          <div class="gallery-item scroll-reveal" data-category="ceremonies" data-index="2" data-src="images/gallery-1.svg" data-caption="The Auspicious Roka &amp; Sagai" data-sub="Blessed by our elders with traditional shagun, sweets, and golden rings.">
+            <div class="gallery-thumb-wrap">
+              <img src="images/gallery-1.svg" alt="The Auspicious Roka" class="gallery-img" loading="lazy">
+              <div class="gallery-overlay">
+                <span class="gallery-zoom-icon">🔍</span>
+                <h4 class="gallery-caption-title">The Auspicious Roka</h4>
+                <p class="gallery-caption-sub">Family Blessings</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4: Joyful Haldi Blooms -->
+          <div class="gallery-item scroll-reveal" data-category="festive" data-index="3" data-src="images/gallery-4.svg" data-caption="Joyful Haldi Blooms" data-sub="Bathed in turmeric, marigold petals, and festive family blessings.">
+            <div class="gallery-thumb-wrap">
+              <img src="images/gallery-4.svg" alt="Joyful Haldi Blooms" class="gallery-img" loading="lazy">
+              <div class="gallery-overlay">
+                <span class="gallery-zoom-icon">🔍</span>
+                <h4 class="gallery-caption-title">Joyful Haldi Blooms</h4>
+                <p class="gallery-caption-sub">Festive Bliss</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5: Sangeet & Beats -->
+          <div class="gallery-item scroll-reveal" data-category="festive" data-index="4" data-src="images/gallery-5.svg" data-caption="Sangeet &amp; Dance Beats" data-sub="Both families coming together on the dance floor in joyous harmony.">
+            <div class="gallery-thumb-wrap">
+              <img src="images/gallery-5.svg" alt="Sangeet &amp; Dance Beats" class="gallery-img" loading="lazy">
+              <div class="gallery-overlay">
+                <span class="gallery-zoom-icon">🔍</span>
+                <h4 class="gallery-caption-title">Sangeet Beats</h4>
+                <p class="gallery-caption-sub">Musical Night</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 6: Sacred Ashirwad -->
+          <div class="gallery-item scroll-reveal" data-category="ceremonies" data-index="5" data-src="images/gallery-6.svg" data-caption="Sacred Ashirwad &amp; Vows" data-sub="Our beloved elders conferring their divine blessings for our lifelong journey.">
+            <div class="gallery-thumb-wrap">
+              <img src="images/gallery-6.svg" alt="Sacred Ashirwad" class="gallery-img" loading="lazy">
+              <div class="gallery-overlay">
+                <span class="gallery-zoom-icon">🔍</span>
+                <h4 class="gallery-caption-title">Sacred Ashirwad</h4>
+                <p class="gallery-caption-sub">Elders' Blessings</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightboxModal" class="lightbox-modal" role="dialog" aria-modal="true" aria-label="Photo Lightbox" hidden>
+      <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+      <div class="lightbox-dialog">
+        <button class="lightbox-btn lightbox-close" id="lightboxCloseBtn" aria-label="Close Lightbox">&times;</button>
+        <button class="lightbox-btn lightbox-prev" id="lightboxPrevBtn" aria-label="Previous Photo">&#10094;</button>
+        <button class="lightbox-btn lightbox-next" id="lightboxNextBtn" aria-label="Next Photo">&#10095;</button>
+        
+        <div class="lightbox-content">
+          <img id="lightboxImg" src="" alt="Wedding Gallery Photo">
+          <div class="lightbox-caption">
+            <h4 id="lightboxTitle"></h4>
+            <p id="lightboxSub"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================
+         SECTION 6: VENUE & LOCATION MAP
+         ======================================================== -->
+    <section id="venue" class="venue-section section-padding">
+      <div class="container">
+        <div class="ornament-divider">
+          <span class="ornament-line"></span>
+          <img src="images/mandala.svg" alt="Mandala" class="ornament-mandala" width="45" height="45">
+          <span class="ornament-line"></span>
+        </div>
+        <p class="section-tag text-center">Where Forever Begins</p>
+        <h2 class="section-title text-center">The Royal Venue</h2>
+        
+        <div class="venue-grid">
+          <!-- Venue Visual & Details -->
+          <div class="venue-info-card scroll-reveal-left">
+            <div class="venue-img-wrap">
+              <img src="images/venue.svg" alt="The Royal Palace Grand Ballroom" class="venue-img" loading="lazy">
+              <span class="venue-badge">Official Wedding Destination</span>
+            </div>
+            
+            <div class="venue-card-body">
+              <h3 class="venue-title">The Grand Heritage Palace</h3>
+              <p class="venue-address">
+                <span class="pin-icon">📍</span>
+                124 Palace Road, Amber Fort Road, Jaipur, Rajasthan 302001, India
+              </p>
+              <p class="venue-desc">
+                Surrounded by majestic Aravalli hills, Mughal gardens, and ornate jharokhas, 
+                The Grand Heritage Palace is a beacon of royal Rajasthan grandeur, offering an 
+                unforgettable royal backdrop for our sacred ceremonies.
+              </p>
+
+              <!-- Helpful Travel Notes -->
+              <div class="venue-highlights">
+                <div class="highlight-item">
+                  <span class="h-icon">✈️</span>
+                  <div class="h-text">
+                    <strong>Airport:</strong> Jaipur International (JAI) — 25 Mins Drive
+                  </div>
+                </div>
+                <div class="highlight-item">
+                  <span class="h-icon">🚆</span>
+                  <div class="h-text">
+                    <strong>Railway:</strong> Jaipur Junction (JP) — 18 Mins Drive
+                  </div>
+                </div>
+                <div class="highlight-item">
+                  <span class="h-icon">🚗</span>
+                  <div class="h-text">
+                    <strong>Valet Parking:</strong> Complimentary 24/7 valet at Main Gate
+                  </div>
+                </div>
+              </div>
+
+              <!-- Get Directions CTA -->
+              <div class="venue-cta-wrap">
+                <a href="https://maps.google.com/?q=The+Grand+Heritage+Palace+Jaipur" target="_blank" rel="noopener noreferrer" class="btn btn-royal">
+                  <span class="btn-icon">🧭</span>
+                  <span>Get Directions On Google Maps</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Embedded Map with Royal Fallback Backdrop -->
+          <div class="venue-map-card scroll-reveal-right">
+            <div class="map-wrapper">
+              <div class="map-backdrop-placeholder">
+                <div class="map-pin-pulse">
+                  <span class="map-pin">📍</span>
+                  <div class="pin-wave"></div>
+                </div>
+                <h4 class="map-palace-title">The Grand Heritage Palace</h4>
+                <p class="map-palace-coords">26.9124° N, 75.7873° E • Jaipur, Rajasthan</p>
+                <a href="https://maps.google.com/?q=The+Grand+Heritage+Palace+Jaipur" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-gold">
+                  Open In Google Maps
+                </a>
+              </div>
+              <iframe 
+                title="Google Maps Location - The Grand Heritage Palace Jaipur"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113840.48782390886!2d75.7289938883526!3d26.912433649692427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db479f9d77703%3A0xcd5040e3d2ff9051!2sJaipur%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+            <div class="map-fallback-bar">
+              <span>Need travel assistance or airport pick-up?</span>
+              <a href="tel:+919876543210" class="btn btn-sm btn-outline-gold">Call Guest Desk</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 7: WARM WISHES & BLESSINGS FORM
+         ======================================================== -->
+    <section id="blessings" class="rsvp-section section-padding">
+      <span id="rsvp" style="position: absolute; top: 0;"></span>
+      <div class="container">
+        <div class="ornament-divider">
+          <span class="ornament-line"></span>
+          <img src="images/mandala.svg" alt="Mandala" class="ornament-mandala" width="45" height="45">
+          <span class="ornament-line"></span>
+        </div>
+        <p class="section-tag text-center">Shower Your Love &amp; Ashirwad</p>
+        <h2 class="section-title text-center">Warm Wishes &amp; Blessings</h2>
+        <p class="section-subtitle text-center">
+          Your heartfelt prayers and warm blessings will be delivered directly to the family at <strong>soubhagyakumar373@gmail.com</strong> for Ayushmati Kshyanashree &amp; Ayushman Manas.
+        </p>
+
+        <div class="rsvp-card scroll-reveal">
+          <form id="weddingRsvpForm" class="rsvp-form" action="https://formsubmit.co/soubhagyakumar373@gmail.com" method="POST" novalidate>
+            <!-- FormSubmit configuration hidden inputs -->
+            <input type="hidden" name="_to" value="soubhagyakumar373@gmail.com">
+            <input type="hidden" name="_subject" value="🌸 New Wedding Blessings for Ayushmati Kshyanashree &amp; Ayushman Manas!">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="guestName">Your Full Name / Family <span class="required">*</span></label>
+                <input type="text" id="guestName" name="name" required placeholder="e.g. Dr. Rajesh Sharma &amp; Family">
+                <span class="field-error" id="nameError"></span>
+              </div>
+              <div class="form-group">
+                <label for="guestEmail">Your Email / Phone (Optional)</label>
+                <input type="text" id="guestEmail" name="email_or_phone" placeholder="e.g. yourname@domain.com or phone number">
+              </div>
+            </div>
+
+            <!-- Warm Wishes & Blessings Textarea -->
+            <div class="form-group">
+              <label for="guestWishes">Warm Wishes &amp; Blessings For The Couple <span class="required">*</span></label>
+              <textarea id="guestWishes" name="message" rows="5" required placeholder="Write your heartfelt congratulations, prayers, and warm blessings for Ayushmati Kshyanashree &amp; Ayushman Manas..."></textarea>
+              <span class="field-error" id="wishesError"></span>
+            </div>
+
+            <div class="form-submit-wrap">
+              <button type="submit" id="rsvpSubmitBtn" class="btn btn-royal btn-shimmer btn-block">
+                <span class="btn-icon">💌</span>
+                <span class="btn-text">Send Blessings to Family</span>
+              </button>
+            </div>
+
+            <p class="blessings-note text-center">
+              ✉ Blessings will be emailed directly to <a href="mailto:soubhagyakumar373@gmail.com?subject=Wedding%20Blessings%20for%20Kshyanashree%20%26%20Manas">soubhagyakumar373@gmail.com</a>
+            </p>
+          </form>
+
+          <!-- Success Notification Modal -->
+          <div id="rsvpSuccessModal" class="rsvp-success-card" hidden>
+            <div class="success-icon-wrap">
+              <span class="success-heart">💖</span>
+            </div>
+            <h3 class="success-title">Thank You, <span id="successGuestName">Beloved Well-Wisher</span>!</h3>
+            <p class="success-message" id="successGuestMessage">
+              Your warm blessings and heartfelt prayers have been sent to <strong>soubhagyakumar373@gmail.com</strong> for Ayushmati Kshyanashree &amp; Ayushman Manas. Your love means the world to both families!
+            </p>
+            <div class="success-details-summary" id="successDetails"></div>
+            <div class="success-actions">
+              <button id="rsvpResetBtn" class="btn btn-sm btn-outline-gold">Send Another Blessing</button>
+              <a href="#couple" class="btn btn-sm btn-royal">View Couple &amp; Story</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================
+       SECTION 8: ROYAL FOOTER
+       ======================================================== -->
+  <footer class="royal-footer">
+    <div class="container text-center">
+      <div class="footer-mandala">
+        <img src="images/mandala.svg" alt="Royal Mandala" width="70" height="70">
+      </div>
+
+      <h3 class="footer-quote shimmer-text">
+        "Marriages are made in heaven, sanctified by our elders, and celebrated with the union of two families."
+      </h3>
+
+      <div class="footer-couples-monogram">
+        <span>Kshyanashree</span>
+        <span class="footer-heart-pulse">♥</span>
+        <span>Manas</span>
+      </div>
+
+      <div class="footer-family-signoff">
+        <p class="family-tag">With Love, Respect &amp; Warm Blessings,</p>
+        <p class="family-names">The Families of Kshyanashree &amp; Manas</p>
+        <p class="family-phone">Wedding Concierge: +91 98765 43210 • info@manaskshyanashree.com</p>
+      </div>
+
+      <!-- Quick Share & Social Actions -->
+      <div class="footer-share-wrap">
+        <a id="whatsappShareBtn" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-whatsapp">
+          <span class="btn-icon">💬</span>
+          <span>Share Invitation on WhatsApp</span>
+        </a>
+        <button id="copyLinkBtn" class="btn btn-sm btn-outline-gold">
+          <span class="btn-icon">🔗</span>
+          <span>Copy Invitation Link</span>
+        </button>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p>© 2027 Ayushmati Kshyanashree &amp; Ayushman Manas's Wedding. Arranged with love &amp; elders' blessings.</p>
+        <button id="backToTopBtn" class="back-to-top" aria-label="Back to top of page">
+          <span>↑</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1600 1000" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde3d3"/>
+      <stop offset="45%" stop-color="#fdeee5"/>
+      <stop offset="100%" stop-color="#f9d7c3"/>
+    </linearGradient>
+    <radialGradient id="blobPeach" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f5b597" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#f5b597" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blobSage" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#b3bc92" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#b3bc92" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Olive leaf, pointing right, base at origin -->
+    <path id="leaf" d="M0,0 C14,-15 40,-17 62,0 C40,17 14,15 0,0 Z"/>
+    <path id="leafVein" d="M2,0 L58,0" fill="none"/>
+    <!-- One olive branch: stem + alternating leaves + a few olives -->
+    <g id="branch">
+      <path d="M0,0 C80,-20 170,-30 300,-10 C360,0 410,15 460,35" fill="none" stroke="#5d6e3a" stroke-width="3" stroke-linecap="round"/>
+      <g fill="#6b7c40">
+        <use href="#leaf" xlink:href="#leaf" transform="translate(40,-9) rotate(-55)"/>
+        <use href="#leaf" xlink:href="#leaf" transform="translate(70,-15) rotate(40)" fill="#8a9a5b"/>
+        <use href="#leaf" xlink:href="#leaf" transform="translate(110,-21) rotate(-60)" fill="#7a8a52"/>
+        <use href="#leaf" xlink:href="#leaf" transform="translate(145,-24) rotate(35)"/>
+        <use href="#leaf" xlink:href="#leaf" transform="translate(185,-26) rotate(-50)" fill="#8a9a5b"/>
+        <use href="#leaf" xlink:href="#leaf" transform="translate(225,-24) rotate(42)" fill="#5d6e3a"/>
+        <use href="#leaf" xlink:href="#leaf" transform="translate(265,-18) rotate(-45)"/>
+        <use href="#leaf" xlink:href="#leaf" transform="translate(305,-10) rotate(48)" fill="#8a9a5b"/>
+        <use href="#leaf" xlink:href="#leaf" transform="translate(345,0) rotate(-35)" fill="#7a8a52"/>
+        <use href="#leaf" xlink:href="#leaf" transform="translate(385,12) rotate(55)"/>
+        <use href="#leaf" xlink:href="#leaf" transform="translate(425,24) rotate(-25)" fill="#8a9a5b"/>
+        <use href="#leaf" xlink:href="#leaf" transform="translate(458,35) rotate(18) scale(0.8)" fill="#5d6e3a"/>
+      </g>
+      <g fill="#4a582f">
+        <ellipse cx="128" cy="-4" rx="9" ry="12" transform="rotate(-20 128 -4)"/>
+        <ellipse cx="248" cy="-36" rx="8" ry="11" transform="rotate(25 248 -36)"/>
+        <ellipse cx="365" cy="22" rx="9" ry="12" transform="rotate(-10 365 22)"/>
+      </g>
+    </g>
+    <!-- Soft peach bloom -->
+    <g id="bloom">
+      <g fill="#f2ad8c" opacity="0.9">
+        <ellipse cx="0" cy="-22" rx="16" ry="24"/>
+        <ellipse cx="0" cy="-22" rx="16" ry="24" transform="rotate(72)"/>
+        <ellipse cx="0" cy="-22" rx="16" ry="24" transform="rotate(144)"/>
+        <ellipse cx="0" cy="-22" rx="16" ry="24" transform="rotate(216)"/>
+        <ellipse cx="0" cy="-22" rx="16" ry="24" transform="rotate(288)"/>
+      </g>
+      <g fill="#f8cbb4">
+        <ellipse cx="0" cy="-13" rx="10" ry="15" transform="rotate(36)"/>
+        <ellipse cx="0" cy="-13" rx="10" ry="15" transform="rotate(108)"/>
+        <ellipse cx="0" cy="-13" rx="10" ry="15" transform="rotate(180)"/>
+        <ellipse cx="0" cy="-13" rx="10" ry="15" transform="rotate(252)"/>
+        <ellipse cx="0" cy="-13" rx="10" ry="15" transform="rotate(324)"/>
+      </g>
+      <circle r="7" fill="#c4704b"/>
+    </g>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+
+  <!-- Watercolour washes -->
+  <circle cx="180" cy="160" r="360" fill="url(#blobPeach)"/>
+  <circle cx="1450" cy="860" r="380" fill="url(#blobPeach)"/>
+  <circle cx="1420" cy="120" r="300" fill="url(#blobSage)"/>
+  <circle cx="160" cy="880" r="320" fill="url(#blobSage)"/>
+
+  <!-- Delicate dotted arcs -->
+  <g fill="none" stroke="#c4704b" stroke-opacity="0.18" stroke-width="1.2" stroke-dasharray="2 9">
+    <circle cx="800" cy="500" r="470"/>
+    <circle cx="800" cy="500" r="560"/>
+  </g>
+
+  <!-- Top-left garland -->
+  <g transform="translate(-40,150) rotate(-18)" opacity="0.95">
+    <use href="#branch" xlink:href="#branch"/>
+  </g>
+  <g transform="translate(60,-30) rotate(60) scale(0.85)" opacity="0.85">
+    <use href="#branch" xlink:href="#branch"/>
+  </g>
+  <use href="#bloom" xlink:href="#bloom" transform="translate(120,120) scale(1.5)"/>
+  <use href="#bloom" xlink:href="#bloom" transform="translate(255,60) scale(0.9) rotate(20)"/>
+  <use href="#bloom" xlink:href="#bloom" transform="translate(60,265) scale(1) rotate(-15)"/>
+
+  <!-- Bottom-right garland (mirrored) -->
+  <g transform="translate(1640,850) rotate(162)" opacity="0.95">
+    <use href="#branch" xlink:href="#branch"/>
+  </g>
+  <g transform="translate(1540,1030) rotate(240) scale(0.85)" opacity="0.85">
+    <use href="#branch" xlink:href="#branch"/>
+  </g>
+  <use href="#bloom" xlink:href="#bloom" transform="translate(1480,880) scale(1.5) rotate(30)"/>
+  <use href="#bloom" xlink:href="#bloom" transform="translate(1345,940) scale(0.9)"/>
+  <use href="#bloom" xlink:href="#bloom" transform="translate(1540,735) scale(1) rotate(10)"/>
+
+  <!-- Small sprigs top-right and bottom-left -->
+  <g transform="translate(1620,200) rotate(200) scale(0.6)" opacity="0.6">
+    <use href="#branch" xlink:href="#branch"/>
+  </g>
+  <g transform="translate(-20,800) rotate(-20) scale(0.6)" opacity="0.6">
+    <use href="#branch" xlink:href="#branch"/>
+  </g>
+
+  <!-- Scattered petals -->
+  <g fill="#f2ad8c" opacity="0.55">
+    <ellipse cx="420" cy="320" rx="7" ry="11" transform="rotate(30 420 320)"/>
+    <ellipse cx="1180" cy="260" rx="6" ry="10" transform="rotate(-25 1180 260)"/>
+    <ellipse cx="340" cy="720" rx="7" ry="11" transform="rotate(60 340 720)"/>
+    <ellipse cx="1260" cy="640" rx="6" ry="10" transform="rotate(15 1260 640)"/>
+    <ellipse cx="980" cy="120" rx="5" ry="8" transform="rotate(-40 980 120)"/>
+    <ellipse cx="600" cy="900" rx="5" ry="8" transform="rotate(50 600 900)"/>
+  </g>
+</svg>

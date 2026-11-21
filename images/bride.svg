@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" width="100%" height="100%">
+  <defs>
+    <linearGradient id="brideBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4d0e19" />
+      <stop offset="100%" stop-color="#24050a" />
+    </linearGradient>
+    <linearGradient id="goldShine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffea9f" />
+      <stop offset="50%" stop-color="#d4af37" />
+      <stop offset="100%" stop-color="#8c6d17" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="750" fill="url(#brideBg)" rx="16"/>
+  <rect x="25" y="25" width="550" height="700" fill="none" stroke="url(#goldShine)" stroke-width="2" rx="10"/>
+  <rect x="35" y="35" width="530" height="680" fill="none" stroke="url(#goldShine)" stroke-width="1" stroke-dasharray="6,4" rx="6"/>
+  
+  <g transform="translate(300, 340)">
+    <circle r="160" fill="url(#goldShine)" opacity="0.12" />
+    <path d="M-120,80 C-100,-70 0,-150 100,-70 C120,80 140,240 110,320 L-110,320 C-140,240 -130,130 -120,80 Z" fill="#801024" stroke="url(#goldShine)" stroke-width="2.5"/>
+    <path d="M-105,70 C-90,-50 0,-130 90,-50 C105,70 120,230 95,300" fill="none" stroke="url(#goldShine)" stroke-width="1.8" stroke-dasharray="4,4"/>
+    
+    <ellipse cx="0" cy="-30" rx="65" ry="80" fill="#f8d4b8" />
+    <path d="M-60,-40 C-60,-110 60,-110 60,-40 C50,-20 30,-50 0,-50 C-30,-50 -50,-20 -60,-40 Z" fill="#1a0c0e"/>
+    
+    <line x1="0" y1="-95" x2="0" y2="-45" stroke="url(#goldShine)" stroke-width="2"/>
+    <circle cx="0" cy="-45" r="7" fill="url(#goldShine)"/>
+    <circle cx="0" cy="-45" r="3.5" fill="#b11226"/>
+    
+    <circle cx="0" cy="-30" r="3" fill="#b11226"/>
+    <path d="M-30,-15 Q-20,-10 -10,-16" stroke="#4a1c1d" stroke-width="2" fill="none"/>
+    <path d="M10,-16 Q20,-10 30,-15" stroke="#4a1c1d" stroke-width="2" fill="none"/>
+    <path d="M-14,18 Q0,28 14,18" stroke="#a0303c" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    
+    <circle cx="-16" cy="7" r="14" fill="none" stroke="url(#goldShine)" stroke-width="1.8"/>
+    <path d="M-30,7 C-45,2 -55,-10 -60,-25" fill="none" stroke="url(#goldShine)" stroke-width="1.2" stroke-dasharray="3,3"/>
+    
+    <g transform="translate(-62,-5)">
+      <polygon points="0,-6 6,5 -6,5" fill="url(#goldShine)" />
+      <circle cx="0" cy="8" r="4" fill="url(#goldShine)" />
+    </g>
+    <g transform="translate(62,-5)">
+      <polygon points="0,-6 6,5 -6,5" fill="url(#goldShine)" />
+      <circle cx="0" cy="8" r="4" fill="url(#goldShine)" />
+    </g>
+    
+    <path d="M-35,50 Q0,75 35,50" stroke="url(#goldShine)" stroke-width="5" fill="none"/>
+    <path d="M-45,70 Q0,110 45,70" stroke="url(#goldShine)" stroke-width="3" fill="none"/>
+    <path d="M-55,95 Q0,150 55,95" stroke="url(#goldShine)" stroke-width="2" fill="none" stroke-dasharray="3,3"/>
+    
+    <path d="M-60,110 L-90,320 L90,320 L60,110 Q0,140 -60,110 Z" fill="#6a0a19" stroke="url(#goldShine)" stroke-width="1.5"/>
+  </g>
+  
+  <text x="300" y="660" text-anchor="middle" font-family="'Cinzel', 'Playfair Display', serif" font-size="28" fill="url(#goldShine)" letter-spacing="3">THE RADIANT BRIDE</text>
+  <text x="300" y="690" text-anchor="middle" font-family="'Poppins', sans-serif" font-size="16" fill="#f8e7b9" font-style="italic">Ananya Sharma</text>
+</svg>

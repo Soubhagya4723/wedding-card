@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Wedding Invitation | Ayushmati Kshyanashree &amp; Ayushman Manas</title>
+  <meta name="description" content="With the blessings of our elders and families, we warmly invite you to celebrate the auspicious wedding ceremony of Ayushmati Kshyanashree &amp; Ayushman Manas on Friday, 4th December 2026 at Kamakhyanagar, Dhenkanal.">
+  <meta name="theme-color" content="#fdeee5">
+
+  <!-- Open Graph for WhatsApp & Social Sharing -->
+  <meta property="og:title" content="Wedding Invitation | Ayushmati Kshyanashree &amp; Ayushman Manas">
+  <meta property="og:description" content="Join us in celebrating the auspicious union of Ayushmati Kshyanashree &amp; Ayushman Manas, on Friday, 4th December 2026 at Gadajata Bhawan, Kamakhyanagar.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/photos/hero-temple-dusk.jpg">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Google Fonts: Pinyon Script (Script), Cormorant Garamond (Serif), Cinzel (Caps), Jost (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========================================================
+       PRELOADER SCREEN
+       ======================================================== -->
+  <div id="preloader" class="preloader" aria-label="Loading Invitation">
+    <div class="preloader-content">
+      <div class="rings-container">
+        <div class="ring ring-1"></div>
+        <div class="ring ring-2"></div>
+        <div class="preloader-heart">♥</div>
+      </div>
+      <p class="preloader-text shimmer-text">Inviting you to celebrate love...</p>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       CANVAS BACKGROUND: Falling Petals & Gold Sparkles
+       ======================================================== -->
+  <canvas id="petals-canvas" class="petals-canvas" aria-hidden="true"></canvas>
+
+  <!-- ========================================================
+       FLOATING AUDIO CONTROLLER
+       ======================================================== -->
+  <div class="floating-audio-container">
+    <button id="musicToggleBtn" class="music-toggle-btn" aria-label="Toggle Wedding Background Music" title="Play / Pause Wedding Music">
+      <div class="music-icon-disc">
+        <svg class="music-note-icon" viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+          <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+        </svg>
+      </div>
+      <div class="audio-waves" id="audioWaves">
+        <span class="wave-bar"></span>
+        <span class="wave-bar"></span>
+        <span class="wave-bar"></span>
+        <span class="wave-bar"></span>
+      </div>
+    </button>
+    <audio id="weddingAudio" loop preload="auto">
+      <source src="audio/wedding-tune.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <!-- ========================================================
+       SECTION 1: HERO / ROYAL OPENING SCREEN & ENVELOPE MODAL
+       ======================================================== -->
+  <section id="hero" class="hero-section">
+    <!-- Hero Background Layer with subtle parallax -->
+    <div class="hero-bg-layer" style="background-image: url('images/hero-bg.svg');"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-split">
+    <!-- Arched couple portrait -->
+    <figure class="hero-photo reveal-on-load">
+      <picture>
+        <source media="(max-width: 900px)" srcset="images/photos/hero-temple-dusk.jpg">
+        <img src="images/photos/temple-embrace.jpg" alt="Kshyanashree and Manas at the temple steps" fetchpriority="high">
+      </picture>
+      <figcaption class="hero-photo-tag">Save the Date · 04.12.2026</figcaption>
+    </figure>
+
+    <div class="hero-container">
+      <!-- Auspicious Shloka / Blessing -->
+      <div class="auspicious-mantra reveal-on-load">
+        <span class="mantra-text">|| श्री गणेशाय नमः ||</span>
+        <span class="mantra-sub">Shree Ganeshay Namah</span>
+      </div>
+
+      <!-- Royal Monogram -->
+      <div class="royal-monogram reveal-on-load">
+        <div class="monogram-badge">
+          <span>K</span>
+          <span class="ampersand">&amp;</span>
+          <span>M</span>
+        </div>
+      </div>
+
+      <!-- Invitation Header -->
+      <p class="hero-subtitle reveal-on-load">Together with their families</p>
+      
+      <!-- Couple Names in Gold Script with Traditional Auspicious Titles -->
+      <h1 class="hero-couple-names shimmer-text reveal-on-load">
+        <span class="name-block">
+          <span class="name-prefix">Ayushmati</span>
+          <span class="name bride-hero-name">Kshyanashree</span>
+        </span>
+        <span class="and-symbol">&amp;</span>
+        <span class="name-block">
+          <span class="name-prefix">Ayushman</span>
+          <span class="name groom-hero-name">Manas</span>
+        </span>
+      </h1>
+
+      <p class="hero-nicknames">
+        <span class="nick">Linky</span>
+        <span class="nick-heart" aria-label="weds">♥</span>
+        <span class="nick">Lipu</span>
+      </p>
+
+      <p class="hero-invitation-line reveal-on-load">
+        cordially invite you to celebrate their wedding ceremonies
+      </p>
+
+      <!-- Wedding Date & Venue Callout -->
+      <div class="hero-date-badge reveal-on-load">
+        <div class="date-item">
+          <span class="date-label">Day</span>
+          <span class="date-day">Friday</span>
+        </div>
+        <div class="date-item highlight">
+          <span class="date-number">04</span>
+          <span class="date-month">Dec 2026</span>
+        </div>
+        <div class="date-item">
+          <span class="date-label">Venue</span>
+          <span class="date-city">Kamakhyanagar</span>
+        </div>
+      </div>
+
+      <!-- Open Invitation Button -->
+      <div class="hero-cta-wrap reveal-on-load">
+        <button id="openInvitationBtn" class="btn btn-royal btn-shimmer" aria-haspopup="dialog" aria-expanded="false">
+          <span class="btn-icon"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></svg></span>
+          <span class="btn-text">Open Invitation</span>
+        </button>
+      </div>
+
+      <!-- Scroll Down Indicator -->
+      <a href="#welcome-msg" class="scroll-down-indicator" aria-label="Scroll down to invitation details">
+        <span>Scroll Down</span>
+        <div class="scroll-arrow">↓</div>
+      </a>
+    </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       ENVELOPE OPENING OVERLAY (Animated Royal Card Transition)
+       ======================================================== -->
+  <div id="envelopeModal" class="envelope-modal" role="dialog" aria-modal="true" aria-labelledby="envelopeTitle" hidden>
+    <div class="envelope-backdrop" id="envelopeBackdrop"></div>
+    <div class="envelope-wrapper">
+      <button class="modal-close-btn" id="closeEnvelopeBtn" aria-label="Close Invitation Preview">&times;</button>
+      
+      <!-- Realistic 3D Royal Envelope -->
+      <div class="envelope" id="envelopeBox">
+        <!-- Envelope Flap -->
+        <div class="envelope-flap" id="envelopeFlap">
+          <!-- Wax Seal -->
+          <div class="wax-seal" id="waxSealBtn" title="Click to break seal & open!">
+            <img src="images/wax-seal.svg" alt="Royal Wax Seal" width="80" height="80">
+          </div>
+        </div>
+        <div class="envelope-pocket"></div>
+        
+        <!-- The Royal Letter card sliding out -->
+        <div class="royal-letter" id="royalLetter">
+          <div class="letter-border">
+            <div class="letter-inner">
+              <div class="letter-mandala">
+                <img src="images/mandala.svg" alt="Mandala" width="60" height="60">
+              </div>
+              <h2 id="envelopeTitle" class="letter-heading">Royal Invitation</h2>
+              <div class="letter-shloka">वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ।<br>निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा॥</div>
+              <p class="letter-names">Kshyanashree &amp; Manas</p>
+              <p class="letter-subnames">(Ayushmati Kshyanashree &amp; Ayushman Manas)</p>
+              <p class="letter-body">
+                Two families unite, two souls begin their sacred journey.<br>
+                Arranged by destiny and sealed with the blessings of our elders, our celebration is made complete with your gracious presence.
+              </p>
+              <div class="letter-date">
+                <strong>Friday, 4th December 2026</strong><br>
+                Gadajata Bhawan, Kamakhyanagar
+              </div>
+              <button id="unfoldInvitationBtn" class="btn btn-royal btn-sm">
+                Enter Celebrations ➔
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="envelope-hint">Click the seal or button to open your personalized card</p>
+    </div>
+  </div>
+
+  <main>
+    <!-- ========================================================
+         FAMILY WELCOME / INVITATION MESSAGE
+         ======================================================== -->
+    <section id="welcome-msg" class="welcome-section section-padding">
+      <div class="container text-center">
+        <div class="ornament-divider">
+          <span class="ornament-line"></span>
+          <img src="images/mandala.svg" alt="Ornate Divider" class="ornament-mandala" width="45" height="45">
+          <span class="ornament-line"></span>
+        </div>
+
+        <p class="section-tag">II Om Shree Shree Prajapataye Namah II</p>
+        <h2 class="section-title">Wedding Invitation</h2>
+
+        <article class="invite-card scroll-reveal">
+          <div class="invite-inner">
+            <!-- Panel 1: blessing & invitation -->
+            <div class="invite-col invite-col--intro">
+              <img src="images/mandala.svg" alt="" class="invite-mandala" width="48" height="48">
+              <p class="invite-shloka">मङ्गलं भगवान्विष्णुर्मङ्गलं गरुडध्वजः ।<br>मङ्गलं पुण्डरीकाक्षो मङ्गलायतनो हरिः ॥</p>
+              <p class="invite-lead">We cordially solicit your gracious presence with family on the auspicious occasion of the</p>
+              <p class="invite-occasion">Marriage Ceremony</p>
+              <p class="invite-lead">of our younger daughter</p>
+            </div>
+
+            <!-- Panel 2: the couple -->
+            <div class="invite-col invite-col--couple">
+              <div class="invite-person">
+                <span class="invite-prefix">Ayushmati</span>
+                <span class="invite-name">Kshyanashree</span>
+              </div>
+              <div class="invite-with"><span>with</span></div>
+              <div class="invite-person">
+                <span class="invite-prefix">Ayushman</span>
+                <span class="invite-name">Manas</span>
+              </div>
+              <p class="invite-parentage">Son of Smt. Lata Das &amp; Sri Braja Kishore Das<br>of Hirapur, Bhubaneswar</p>
+            </div>
+
+            <!-- Panel 3: date & hosts -->
+            <div class="invite-col invite-col--details">
+              <div class="invite-date">
+                <span class="invite-date-side">Friday</span>
+                <span class="invite-date-main"><b>4</b><small>December 2026</small></span>
+                <span class="invite-date-side">Kamakhyanagar</span>
+              </div>
+              <p class="invite-bless">Kindly grace the occasion &amp; bless the newlyweds.</p>
+              <div class="invite-hosts">
+                <span class="invite-awaiting">Awaiting You,</span>
+                <span class="invite-host-name">Smt. Sukanti Behera</span>
+                <span class="invite-host-name">Sri Suresh Chandra Behera</span>
+                <span class="invite-host-place">PHD Colony, Anantapur, Kamakhyanagar</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         FULL-BLEED PHOTO QUOTE BAND
+         ======================================================== -->
+    <section class="photo-band" style="--band-img: url('images/photos/hero-temple-dusk.jpg');" aria-label="A blessed beginning">
+      <div class="photo-band-inner scroll-reveal">
+        <span class="photo-band-tag">Two hearts · One promise</span>
+        <p class="photo-band-quote">“In every lifetime, I would still choose you.”</p>
+        <span class="photo-band-names">Kshyanashree &amp; Manas</span>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 2: OUR STORY / COUPLE SECTION
+         ======================================================== -->
+    <section id="couple" class="couple-section section-padding">
+      <div class="container">
+        <div class="ornament-divider">
+          <span class="ornament-line"></span>
+          <span class="ornament-heart">❦</span>
+          <span class="ornament-line"></span>
+        </div>
+        <p class="section-tag text-center">Two Families, Two Souls, One Auspicious Match</p>
+        <h2 class="section-title text-center">Meet The Couple</h2>
+
+        <div class="couple-grid">
+          <!-- Bride Card -->
+          <div class="couple-card bride-card scroll-reveal-left">
+            <div class="couple-img-wrapper">
+              <img src="images/photos/bride.jpg" alt="Ayushmati Kshyanashree - The Radiant Bride" class="couple-img bride-photo" loading="lazy">
+              <div class="couple-frame-border"></div>
+            </div>
+            <div class="couple-info">
+              <div class="couple-head">
+                <span class="couple-role">The Radiant Bride</span>
+              <h3 class="couple-name">Ayushmati Kshyanashree</h3>
+              <p class="couple-parentage">Younger daughter of Smt. Sukanti Behera &amp; Sri Suresh Chandra Behera</p>
+              </div>
+              <p class="couple-bio">
+                "Graceful, cultured, and deeply devoted to family traditions. 
+                From their very first family meeting, she recognized in Manas a gentleman of genuine integrity, intellect, and profound family values."
+              </p>
+              <div class="couple-social">
+                <span class="quote-sign">“When families unite with respect, hearts find their true home.”</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Center Love Badge -->
+          <div class="couple-center-badge scroll-reveal-zoom">
+            <div class="center-photo-badge">
+              <img src="images/photos/together-smile.jpg" alt="Kshyanashree and Manas together" loading="lazy">
+              <span class="badge-ring"></span>
+            </div>
+            <span class="badge-text">Blessed By Elders</span>
+          </div>
+
+          <!-- Groom Card -->
+          <div class="couple-card groom-card scroll-reveal-right">
+            <div class="couple-img-wrapper">
+              <img src="images/photos/groom.jpg" alt="Ayushman Manas - The Dashing Groom" class="couple-img groom-photo" loading="lazy">
+              <div class="couple-frame-border"></div>
+            </div>
+            <div class="couple-info">
+              <div class="couple-head">
+                <span class="couple-role">The Dashing Groom</span>
+              <h3 class="couple-name">Ayushman Manas</h3>
+              <p class="couple-parentage">Son of Smt. Lata Das &amp; Sri Braja Kishore Das, Hirapur</p>
+              </div>
+              <p class="couple-bio">
+                "Warm-hearted, visionary, and rooted in rich cultural heritage. 
+                Upon meeting Kshyanashree and her family, he was captivated by her poise, intellect, and warmth, knowing she was his ideal life companion."
+              </p>
+              <div class="couple-social">
+                <span class="quote-sign">“Arranged by destiny, confirmed by values, blessed for eternity.”</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- LOVE STORY TIMELINE -->
+        <div id="story" class="love-story-block">
+          <div class="ornament-divider">
+            <span class="ornament-line"></span>
+            <img src="images/mandala.svg" alt="Mandala" class="ornament-mandala" width="35" height="35">
+            <span class="ornament-line"></span>
+          </div>
+          <p class="section-tag text-center">The Auspicious Journey</p>
+          <h3 class="subsection-title text-center">From First Meeting To Forever</h3>
+
+          <div class="story-timeline">
+            <!-- Chapter 01 -->
+            <article class="story-row">
+              <figure class="story-photo scroll-reveal-left">
+                <img src="images/photos/closeup-smile.jpg" alt="A shy first smile" loading="lazy" style="object-position: 50% 30%;">
+              </figure>
+              <div class="story-node" aria-hidden="true"><span>01</span></div>
+              <div class="story-text scroll-reveal-right">
+                
+                <h4 class="story-title">The Families Meet</h4>
+                <span class="story-sub">Rishta Meeting</span>
+                <p>Introduced through our families' shared connections, we met on an auspicious afternoon over traditional chai and sweets. Gentle introductions blossomed into hours of warm conversation about life, dreams and family values.</p>
+              </div>
+            </article>
+
+            <!-- Chapter 02 -->
+            <article class="story-row story-row--reverse">
+              <figure class="story-photo scroll-reveal-right">
+                <img src="images/photos/under-the-tree.jpg" alt="Growing closer under the old tree" loading="lazy" style="object-position: 50% 40%;">
+              </figure>
+              <div class="story-node" aria-hidden="true"><span>02</span></div>
+              <div class="story-text scroll-reveal-left">
+                
+                <h4 class="story-title">Connecting Minds &amp; Values</h4>
+                <span class="story-sub">Growing Closer</span>
+                <p>Over phone calls and dinners with our families, we discovered how beautifully our values aligned, and how naturally mutual respect turned into a deep friendship.</p>
+              </div>
+            </article>
+
+            <!-- Chapter 03 -->
+            <article class="story-row">
+              <figure class="story-photo scroll-reveal-left">
+                <img src="images/photos/together-smile.jpg" alt="Together after the Roka" loading="lazy" style="object-position: 50% 35%;">
+              </figure>
+              <div class="story-node" aria-hidden="true"><span>03</span></div>
+              <div class="story-text scroll-reveal-right">
+                
+                <h4 class="story-title">The Auspicious Roka &amp; Sagai</h4>
+                <span class="story-sub">Blessed by Elders</span>
+                <p>With the joyous blessings of our grandparents and parents, the sacred Roka was solemnized. We exchanged rings and traditional shagun, uniting our families in celebration.</p>
+              </div>
+            </article>
+
+            <!-- Chapter 04 -->
+            <article class="story-row story-row--reverse story-row--final">
+              <figure class="story-photo scroll-reveal-right">
+                <img src="images/photos/temple-embrace.jpg" alt="Together at the temple" loading="lazy" style="object-position: 50% 72%;">
+              </figure>
+              <div class="story-node" aria-hidden="true"><span>04</span></div>
+              <div class="story-text scroll-reveal-left">
+                <span class="story-date">4 December 2026</span>
+                <h4 class="story-title">Marriage &amp; Panigrahan</h4>
+                <span class="story-sub">Forever Begins</span>
+                <p>Surrounded by the holy Vedic fire and our cherished elders, we begin our lifelong journey of companionship, dharma and eternal togetherness.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 3: LIVE COUNTDOWN TIMER
+         ======================================================== -->
+    <section id="countdown" class="countdown-section section-padding" style="--band-img: url('images/photos/temple-steps.jpg');">
+      <div class="container text-center">
+        <p class="section-tag">Counting Every Precious Second</p>
+        <h2 class="section-title">Until We Say "I Do"</h2>
+        <p class="countdown-sub">Friday, 4th December 2026 • Dinner from 7:00 PM</p>
+
+        <!-- Live Countdown Grid -->
+        <div class="countdown-grid scroll-reveal-zoom" id="countdownGrid" data-wedding-date="2026-12-04T19:00:00">
+          <div class="countdown-card">
+            <div class="countdown-num" id="days">00</div>
+            <div class="countdown-label">Days</div>
+          </div>
+          <div class="countdown-card">
+            <div class="countdown-num" id="hours">00</div>
+            <div class="countdown-label">Hours</div>
+          </div>
+          <div class="countdown-card">
+            <div class="countdown-num" id="minutes">00</div>
+            <div class="countdown-label">Minutes</div>
+          </div>
+          <div class="countdown-card">
+            <div class="countdown-num" id="seconds">00</div>
+            <div class="countdown-label">Seconds</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 4: EVENT DETAILS (FUNCTION CARDS)
+         ======================================================== -->
+    <section id="events" class="events-section section-padding">
+      <div class="container">
+        <div class="ornament-divider">
+          <span class="ornament-line"></span>
+          <img src="images/mandala.svg" alt="Mandala" class="ornament-mandala" width="45" height="45">
+          <span class="ornament-line"></span>
+        </div>
+        <p class="section-tag text-center">Rituals &amp; Celebrations</p>
+        <h2 class="section-title text-center">Wedding Itinerary</h2>
+        <p class="section-subtitle text-center">
+          We request the honor of your gracious presence at each of our wedding festivities.
+        </p>
+
+        <div class="events-grid">
+          <!-- 1. Haldi -->
+          <div class="event-card scroll-reveal">
+            <div class="event-card-top">
+              <div class="event-icon-box">
+                <img src="images/haldi.svg" alt="Mangalakrutya &amp; Haldi" width="60" height="60">
+              </div>
+              <span class="event-badge">Day One</span>
+            </div>
+            <h3 class="event-name">Mangalakrutya &amp; Haldi</h3>
+            <p class="event-desc">
+              The auspicious Mangalakrutya rituals and Haldi, blessed with turmeric, marigolds and the love of family.
+            </p>
+            <div class="event-meta">
+              <div class="meta-row">
+                <span class="meta-icon"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2.5"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 17.5h.01M12 17.5h.01"/></svg></span>
+                <span class="meta-text">Thursday, 3 Dec 2026</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-icon"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+                <span class="meta-text">9:00 AM Onwards</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-icon"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+                <span class="meta-text">Behera Residence, PHD Colony, Anantapur, Kamakhyanagar</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Mehndi -->
+          <div class="event-card scroll-reveal">
+            <div class="event-card-top">
+              <div class="event-icon-box">
+                <img src="images/mehndi.svg" alt="Mehndi Ceremony" width="60" height="60">
+              </div>
+              <span class="event-badge">Day One</span>
+            </div>
+            <h3 class="event-name">Mehndi Ceremony</h3>
+            <p class="event-desc">
+              Intricate henna art, folk music, dhol beats, and sweet laughter under fragrant canopies.
+            </p>
+            <div class="event-meta">
+              <div class="meta-row">
+                <span class="meta-icon"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2.5"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 17.5h.01M12 17.5h.01"/></svg></span>
+                <span class="meta-text">Thursday, 3 Dec 2026</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-icon"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+                <span class="meta-text">6:00 PM Onwards</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-icon"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+                <span class="meta-text">Behera Residence, PHD Colony, Anantapur, Kamakhyanagar</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Wedding (Holy Pheras) -->
+          <div class="event-card highlight-event-card scroll-reveal">
+            <div class="event-card-top">
+              <div class="event-icon-box">
+                <img src="images/wedding.svg" alt="Wedding Ceremony" width="60" height="60">
+              </div>
+              <span class="event-badge royal-badge">Friday · 4 Dec</span>
+            </div>
+            <h3 class="event-name">Marriage &amp; Panigrahan</h3>
+            <p class="event-desc">
+              The sacred marriage and Panigrahan rituals, followed by the reception and dinner with family and friends.
+            </p>
+            <div class="event-meta">
+              <div class="meta-row">
+                <span class="meta-icon"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2.5"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 17.5h.01M12 17.5h.01"/></svg></span>
+                <span class="meta-text"><strong>Friday, 4 Dec 2026</strong></span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-icon"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+                <span class="meta-text">Reception &amp; Dinner from 7:00 PM</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-icon"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+                <span class="meta-text">Gadajata Bhawan, Town Field, Kamakhyanagar, Dhenkanal</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 5: PHOTO GALLERY WITH LIGHTBOX
+         ======================================================== -->
+    <section id="gallery" class="gallery-section album-section section-padding">
+      <div class="container">
+        <div class="ornament-divider">
+          <span class="ornament-line"></span>
+          <span class="ornament-heart">♥</span>
+          <span class="ornament-line"></span>
+        </div>
+        <p class="section-tag text-center">Moments Frozen In Time</p>
+        <h2 class="section-title text-center">Our Pre-Wedding Album</h2>
+        <p class="section-subtitle text-center">
+          Glimpses into our journey, our smiles, and the chapters written along the way.
+        </p>
+        <p class="album-meta"><span>9 Moments</span><span class="album-dot"></span><span>Tap any photo to view</span></p>
+
+        <!-- Album page: all photos arranged inside one frame -->
+        <div class="album-frame scroll-reveal">
+          <div class="gallery-grid" id="galleryGrid">
+          <figure class="gallery-item ph-1 scroll-reveal" data-category="temple" data-index="0" data-src="images/photos/hero-temple-dusk.jpg" data-caption="Hand in Hand" data-sub="At the temple at dusk">
+            <div class="gallery-thumb-wrap">
+              <img src="images/photos/hero-temple-dusk.jpg" alt="Hand in Hand — At the temple at dusk" class="gallery-img" loading="lazy">
+              <figcaption class="gallery-overlay">
+                <span class="gallery-zoom-icon" aria-hidden="true">⤢</span>
+                <h4 class="gallery-caption-title">Hand in Hand</h4>
+                <p class="gallery-caption-sub">At the temple at dusk</p>
+              </figcaption>
+            </div>
+          </figure>
+          <figure class="gallery-item ph-2 scroll-reveal" data-category="candid" data-index="1" data-src="images/photos/closeup-smile.jpg" data-caption="That Smile" data-sub="Close, candid and completely happy">
+            <div class="gallery-thumb-wrap">
+              <img src="images/photos/closeup-smile.jpg" alt="That Smile — Close, candid and completely happy" class="gallery-img" loading="lazy">
+              <figcaption class="gallery-overlay">
+                <span class="gallery-zoom-icon" aria-hidden="true">⤢</span>
+                <h4 class="gallery-caption-title">That Smile</h4>
+                <p class="gallery-caption-sub">Close, candid and completely happy</p>
+              </figcaption>
+            </div>
+          </figure>
+          <figure class="gallery-item ph-3 scroll-reveal" data-category="candid" data-index="2" data-src="images/photos/twirl.jpg" data-caption="The Twirl" data-sub="Laughter in the courtyard">
+            <div class="gallery-thumb-wrap">
+              <img src="images/photos/twirl.jpg" alt="The Twirl — Laughter in the courtyard" class="gallery-img" loading="lazy">
+              <figcaption class="gallery-overlay">
+                <span class="gallery-zoom-icon" aria-hidden="true">⤢</span>
+                <h4 class="gallery-caption-title">The Twirl</h4>
+                <p class="gallery-caption-sub">Laughter in the courtyard</p>
+              </figcaption>
+            </div>
+          </figure>
+          <figure class="gallery-item ph-4 scroll-reveal" data-category="temple" data-index="3" data-src="images/photos/temple-embrace.jpg" data-caption="An Embrace" data-sub="Before the ancient doorway">
+            <div class="gallery-thumb-wrap">
+              <img src="images/photos/temple-embrace.jpg" alt="An Embrace — Before the ancient doorway" class="gallery-img" loading="lazy">
+              <figcaption class="gallery-overlay">
+                <span class="gallery-zoom-icon" aria-hidden="true">⤢</span>
+                <h4 class="gallery-caption-title">An Embrace</h4>
+                <p class="gallery-caption-sub">Before the ancient doorway</p>
+              </figcaption>
+            </div>
+          </figure>
+          <figure class="gallery-item ph-5 scroll-reveal" data-category="portraits" data-index="4" data-src="images/photos/under-the-tree.jpg" data-caption="Under the Old Tree" data-sub="Leaning into forever">
+            <div class="gallery-thumb-wrap">
+              <img src="images/photos/under-the-tree.jpg" alt="Under the Old Tree — Leaning into forever" class="gallery-img" loading="lazy">
+              <figcaption class="gallery-overlay">
+                <span class="gallery-zoom-icon" aria-hidden="true">⤢</span>
+                <h4 class="gallery-caption-title">Under the Old Tree</h4>
+                <p class="gallery-caption-sub">Leaning into forever</p>
+              </figcaption>
+            </div>
+          </figure>
+          <figure class="gallery-item ph-6 scroll-reveal" data-category="temple" data-index="5" data-src="images/photos/temple-pose.jpg" data-caption="Side by Side" data-sub="Regal on the temple steps">
+            <div class="gallery-thumb-wrap">
+              <img src="images/photos/temple-pose.jpg" alt="Side by Side — Regal on the temple steps" class="gallery-img" loading="lazy">
+              <figcaption class="gallery-overlay">
+                <span class="gallery-zoom-icon" aria-hidden="true">⤢</span>
+                <h4 class="gallery-caption-title">Side by Side</h4>
+                <p class="gallery-caption-sub">Regal on the temple steps</p>
+              </figcaption>
+            </div>
+          </figure>
+          <figure class="gallery-item ph-7 scroll-reveal" data-category="temple" data-index="6" data-src="images/photos/temple-steps.jpg" data-caption="Temple Steps" data-sub="Quiet moments in stone and shadow">
+            <div class="gallery-thumb-wrap">
+              <img src="images/photos/temple-steps.jpg" alt="Temple Steps — Quiet moments in stone and shadow" class="gallery-img" loading="lazy">
+              <figcaption class="gallery-overlay">
+                <span class="gallery-zoom-icon" aria-hidden="true">⤢</span>
+                <h4 class="gallery-caption-title">Temple Steps</h4>
+                <p class="gallery-caption-sub">Quiet moments in stone and shadow</p>
+              </figcaption>
+            </div>
+          </figure>
+          <figure class="gallery-item ph-8 scroll-reveal" data-category="portraits" data-index="7" data-src="images/photos/together-smile.jpg" data-caption="Together" data-sub="Two families, one smile">
+            <div class="gallery-thumb-wrap">
+              <img src="images/photos/together-smile.jpg" alt="Together — Two families, one smile" class="gallery-img" loading="lazy">
+              <figcaption class="gallery-overlay">
+                <span class="gallery-zoom-icon" aria-hidden="true">⤢</span>
+                <h4 class="gallery-caption-title">Together</h4>
+                <p class="gallery-caption-sub">Two families, one smile</p>
+              </figcaption>
+            </div>
+          </figure>
+          <figure class="gallery-item ph-9 scroll-reveal" data-category="candid" data-index="8" data-src="images/photos/elephant-garden.jpg" data-caption="Garden of Elephants" data-sub="A promise among the statues">
+            <div class="gallery-thumb-wrap">
+              <img src="images/photos/elephant-garden.jpg" alt="Garden of Elephants — A promise among the statues" class="gallery-img" loading="lazy">
+              <figcaption class="gallery-overlay">
+                <span class="gallery-zoom-icon" aria-hidden="true">⤢</span>
+                <h4 class="gallery-caption-title">Garden of Elephants</h4>
+                <p class="gallery-caption-sub">A promise among the statues</p>
+              </figcaption>
+            </div>
+          </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightboxModal" class="lightbox-modal" role="dialog" aria-modal="true" aria-label="Photo Lightbox" hidden>
+      <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+      <div class="lightbox-dialog">
+        <button class="lightbox-btn lightbox-close" id="lightboxCloseBtn" aria-label="Close Lightbox">&times;</button>
+        <button class="lightbox-btn lightbox-prev" id="lightboxPrevBtn" aria-label="Previous Photo">&#10094;</button>
+        <button class="lightbox-btn lightbox-next" id="lightboxNextBtn" aria-label="Next Photo">&#10095;</button>
+        
+        <div class="lightbox-content">
+          <img id="lightboxImg" src="" alt="Wedding Gallery Photo">
+          <div class="lightbox-caption">
+            <span id="lightboxCounter" class="lightbox-counter"></span>
+            <h4 id="lightboxTitle"></h4>
+            <p id="lightboxSub"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+  </main>
+
+  <!-- ========================================================
+       SECTION 8: ROYAL FOOTER
+       ======================================================== -->
+  <footer class="royal-footer" style="--band-img: url('images/photos/elephant-garden.jpg');">
+    <div class="container text-center">
+      <div class="footer-mandala">
+        <img src="images/mandala.svg" alt="Royal Mandala" width="70" height="70">
+      </div>
+
+      <h3 class="footer-quote shimmer-text">
+        "Marriages are made in heaven, sanctified by our elders, and celebrated with the union of two families."
+      </h3>
+
+      <div class="footer-couples-monogram">
+        <span>Kshyanashree</span>
+        <span class="footer-heart-pulse">♥</span>
+        <span>Manas</span>
+      </div>
+
+      <div class="footer-family-signoff">
+        <p class="family-tag">With Best Compliments From</p>
+        <p class="family-names">Behera Family, Friends &amp; Relatives</p>
+        <p class="family-phone">R.S.V.P. · Sri Suresh Chandra Behera &amp; Smt. Sukanti Behera<br>PHD Colony, Anantapur, Kamakhyanagar · <a href="tel:+919668256424">96682 56424</a> · <a href="tel:+918112133856">81121 33856</a></p>
+      </div>
+
+      <!-- Quick Share & Social Actions -->
+      <!-- Venue & directions -->
+      <div class="footer-venue">
+        <span class="footer-venue-tag"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg> Venue</span>
+        <p class="footer-venue-name">Gadajata Bhawan</p>
+        <p class="footer-venue-addr">Town Field, Kamakhyanagar, Dhenkanal, Odisha</p>
+        <a href="https://maps.app.goo.gl/4De8m6Pbz3ek85Rx5" target="_blank" rel="noopener noreferrer" class="btn btn-gold footer-directions-btn">
+          <span class="btn-icon"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></span>
+          <span>Get Directions</span>
+        </a>
+      </div>
+
+      <div class="footer-share-wrap">
+        <a id="whatsappShareBtn" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-whatsapp">
+          <span class="btn-icon"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.6 7.4L3.5 20l1.2-4.2A8.5 8.5 0 1 1 20.5 11.5z"/></svg></span>
+          <span>Share Invitation on WhatsApp</span>
+        </a>
+        <button id="copyLinkBtn" class="btn btn-sm btn-outline-gold">
+          <span class="btn-icon"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13.5a4.5 4.5 0 0 0 6.4.4l3-3a4.5 4.5 0 0 0-6.4-6.4l-1.7 1.7"/><path d="M14 10.5a4.5 4.5 0 0 0-6.4-.4l-3 3a4.5 4.5 0 0 0 6.4 6.4l1.7-1.7"/></svg></span>
+          <span>Copy Invitation Link</span>
+        </button>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p>© 2026 · Linky weds Lipu · Ayushmati Kshyanashree &amp; Ayushman Manas</p>
+        <button id="backToTopBtn" class="back-to-top" aria-label="Back to top of page">
+          <span>↑</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gBg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e3526"/>
+      <stop offset="100%" stop-color="#051912"/>
+    </linearGradient>
+    <linearGradient id="goldG1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffe8a3"/>
+      <stop offset="50%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#916f16"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="450" rx="12" fill="url(#gBg1)"/>
+  <rect x="18" y="18" width="564" height="414" rx="8" fill="none" stroke="url(#goldG1)" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <!-- Palace Garden Arch Silhouette -->
+  <g transform="translate(300, 225)">
+    <circle r="95" fill="url(#goldG1)" opacity="0.08"/>
+    <path d="M-90,110 L-90,-20 C-90,-90 90,-90 90,-20 L90,110" fill="none" stroke="url(#goldG1)" stroke-width="4"/>
+    <path d="M-70,110 L-70,-15 C-70,-70 70,-70 70,-15 L70,110" fill="none" stroke="url(#goldG1)" stroke-width="1.5" stroke-dasharray="5,4"/>
+    <!-- Couple Silhouette Smiling -->
+    <circle cx="-25" cy="-10" r="22" fill="#fddcb8"/>
+    <circle cx="25" cy="-5" r="20" fill="#f6ceae"/>
+    <path d="M-45,110 L-10,30 L0,30 L-20,110 Z" fill="#fdfaf2"/>
+    <path d="M5,110 L25,30 L35,30 L15,110 Z" fill="#991629"/>
+    <!-- Blooming flowers -->
+    <circle cx="-85" cy="50" r="10" fill="#e24a68"/>
+    <circle cx="85" cy="50" r="10" fill="#e24a68"/>
+  </g>
+</svg>

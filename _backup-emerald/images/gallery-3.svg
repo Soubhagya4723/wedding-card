@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gBg2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#061d14"/>
+      <stop offset="50%" stop-color="#134231"/>
+      <stop offset="100%" stop-color="#1e5e47"/>
+    </linearGradient>
+    <linearGradient id="sunGold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff2a8"/>
+      <stop offset="100%" stop-color="#d4af37"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="450" rx="12" fill="url(#gBg2)"/>
+  <rect x="18" y="18" width="564" height="414" rx="8" fill="none" stroke="url(#sunGold)" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <!-- Golden Sunset Sun -->
+  <circle cx="300" cy="200" r="75" fill="url(#sunGold)" opacity="0.85"/>
+  <!-- Water ripples -->
+  <path d="M60,280 Q300,290 540,280" stroke="#fce484" stroke-width="2" fill="none" opacity="0.6"/>
+  <path d="M100,310 Q300,320 500,310" stroke="#fce484" stroke-width="2.5" fill="none" opacity="0.5"/>
+  <path d="M140,340 Q300,348 460,340" stroke="#fce484" stroke-width="2" fill="none" opacity="0.4"/>
+  <!-- Couple walking on lakeshore bridge -->
+  <path d="M160,280 L440,280" stroke="#150205" stroke-width="8"/>
+  <circle cx="280" cy="235" r="14" fill="#150205"/>
+  <circle cx="315" cy="240" r="12" fill="#150205"/>
+  <path d="M272,250 L288,280 L275,280 Z" fill="#150205"/>
+  <path d="M308,252 L325,280 L312,280 Z" fill="#150205"/>
+  <line x1="285" y1="260" x2="310" y2="260" stroke="#150205" stroke-width="3"/>
+</svg>
